@@ -7,8 +7,8 @@
 
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/agencia</property>
-    <property name="hibernate.connection.username">curso</property>
-    <property name="hibernate.connection.password">curso</property>
+    <property name="hibernate.connection.username">master</property>
+    <property name="hibernate.connection.password">master</property>
     
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.connection.pool_size">1</property>    
