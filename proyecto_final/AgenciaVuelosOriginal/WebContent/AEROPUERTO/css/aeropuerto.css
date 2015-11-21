@@ -1,0 +1,60 @@
+@CHARSET "ISO-8859-1";
+
+.form-editar-aeropuerto form,.form-alta-aeropuerto form {
+	padding: 30px;
+}
+
+.form-editar-aeropuerto form input,.form-alta-aeropuerto form input {
+	margin-bottom: 15px;
+}
+
+.form-editar-aeropuerto form div,.form-alta-aeropuerto form div {
+	margin-bottom: 5px;
+}
+
+.bt-guardar,.bt-alta {
+	margin-top: 25px;
+	background: none;
+	background-image: url("../../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	font-size: 17px;
+	color:white;
+	border: 1px solid #BFD1E7;
+}
+
+.tasks-aeropuerto {
+	display: inline-flex;
+	margin-top: 10px;
+}
+
+.tasks-aeropuerto .enlace-aeropuertos {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: #75AE11;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-aeropuerto .enlace-aeropuertos-selected {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-aeropuerto .enlace-aeropuertos a {
+	color: white;
+	text-decoration: none;
+}
+
+.tasks-aeropuerto .enlace-aeropuertos-selected a {
+	color: #75AE11;
+	text-decoration: none;
+}
+
+.form-alta-aeropuerto form .codigo{
+	  margin-bottom: 0px;
+}

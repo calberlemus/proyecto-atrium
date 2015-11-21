@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="app.modelo.Reserva" table="RESERVA">
+        <id name="Id" type="java.lang.Long">
+            <column name="ID_RESERVA" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="vueloIda">
+            <column name="ID_VUELO_IDA" />
+        </many-to-one>
+        
+        <many-to-one name="vueloVuelta">
+            <column name="ID_VUELO_VUELTA" />
+        </many-to-one>
+        <many-to-one name="cliente">
+            <column name="ID_CLIENTE" />
+        </many-to-one>
+        <property name="claseIda">
+            <column name="CLASEIDA" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">app.modelo.Clase</param>
+            </type>
+        </property>
+        <property name="claseVuelta">
+            <column name="CLASEVUELTA" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">app.modelo.Clase</param>
+            </type>
+        </property>
+        <property name="precioPersona" type="double">
+            <column name="PRECIOPERSONA" />
+        </property>
+        <property name="cancelada" type="boolean">
+            <column name="CANCELADA" />
+        </property>
+        <property name="fecha" type="java.util.Date">
+            <column name="FECHA" />
+        </property>
+
+        <set name="pasajeros" table="RESERVA_PASAJERO" inverse="true" cascade="all">
+            <key column="ID_RESERVA" />           
+            <many-to-many column="ID_PASAJERO" 
+                          class="app.modelo.Pasajero" />
+        </set>       
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="app.modelo.Persona" table="PERSONA">
+        <id name="Id" type="java.lang.Long">
+            <column name="ID_PERSONA" />
+            <generator class="native" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="apellidos" type="java.lang.String">
+            <column name="APELLIDOS" />
+        </property>
+        <property name="dni" type="java.lang.String">
+            <column name="DNI" />
+        </property>
+        <property name="fechaNacimiento" type="date">
+            <column name="FECHANACIMIENTO" />
+        </property>
+        <component name="direccion" class="app.modelo.Direccion">
+        	<property name="calle" column="CALLE" type="string"/>
+        	<property name="numero" column="NUMERO" type="string"/>
+        	<property name="poblacion" column="POBLACION" type="string"/>
+        	<property name="provincia" column="PROVINCIA" type="string"/>
+        	<property name="cp" column="CP" type="long"/>
+        </component>
+    </class>
+</hibernate-mapping>

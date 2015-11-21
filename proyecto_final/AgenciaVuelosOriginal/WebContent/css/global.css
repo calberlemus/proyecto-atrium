@@ -1,0 +1,297 @@
+@CHARSET "ISO-8859-1";
+
+.label-inline{
+	display:inline-block;
+}
+.lista-vuelos{
+	padding: 20px;
+}
+.origen-destino{
+	width: 375px;
+	
+}
+.origen-destino a{
+	text-decoration: none;
+}
+.ayuda{
+  font-size: 9px;
+  margin-top:3px;
+  margin-bottom: 15px !important;
+  color:#848A91;
+}
+.precio{
+	text-align: right;
+}
+
+.menu-principal {
+	width: 100%;
+	background-image: url("../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+}
+
+.menu-principal .item {
+	display: inline;
+	margin-right: 20px;
+}
+
+.menu-principal .item a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu-principal .item-final {
+	margin-right: 0px;
+}
+
+.page {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.content-home .titulo-bloque {
+	text-align: center;
+}
+
+.content-top {
+	height: 406px;
+}
+
+.content-top .buscador {
+	width: 356px;
+	float: left;
+	border: 1px solid #75AE11;
+	border-radius: 0px 32px;
+}
+
+.content-top .buscador .titulo-buscador {
+	height: 26px;
+	background-image: url("../imagenes/bg-image-titulo-buscador.gif");
+	border-radius: 0px 32px 0px 0px;
+}
+
+.content-top .buscador .radio-ida{
+	margin-right: 24px;
+}
+
+.content-top .buscador .form-buscador {
+	min-height: 378px;
+}
+
+.content-top .slider {
+	width: 630px;
+	float: right;
+	border: 1px solid #BFD1E7;
+}
+
+.content-top .slider .slider-ofertas {
+	height: 404px;
+}
+
+.content-bottom {
+	margin-top: 12px;
+}
+
+.content-bottom .ofertas-vuelos-internacionales,.content-bottom .ofertas-vuelos-nacionales
+	{
+	width: 45%;
+	height: 263px;
+	border: 1px solid #BFD1E7;
+}
+
+.content-bottom .ofertas-vuelos-internacionales {
+	float: right;
+	border-radius: 32px 0px;
+}
+
+.content-bottom .ofertas-vuelos-nacionales {
+	float: left;
+	border-radius: 0px 32px;
+}
+
+.content-bottom .titulo-bloque {
+	background-image: url("../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	height: 26px;
+}
+
+.content-bottom .titulo-ofertas-internacionales {
+	border-radius: 32px 0px 0px 0px;
+}
+
+.content-bottom .titulo-ofertas-nacionales {
+	border-radius: 0px 32px 0px 0px;
+}
+
+.content {
+	padding: 38px;
+}
+
+.content .contenido {
+	border-radius: 0px 32px;
+	border: 1px solid #75AE11;
+}
+
+.content .contenido table {
+	padding: 30px;
+	width: 100%;
+	text-align: center;
+}
+
+.content .contenido table th,.content .contenido table td {
+	padding: 15px;
+	border-bottom: 1px solid #75AE11;
+}
+
+.logout,.login {
+	display: inline-block;
+	border-radius: 0px 32px;
+	border: 1px solid #BFD1E7;
+}
+
+.login form {
+	padding: 29px;
+}
+
+.login .input-text {
+	margin-bottom: 10px;
+}
+
+.banner-logo {
+	display: inline-block;
+	width: 70%;
+}
+
+.bt-login {
+	background: none;
+	background-image: url("../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	font-size: 17px;
+	color: white;
+	border: 1px solid #BFD1E7;
+}
+
+.bt-perfil,.bt-logout,.link-registro {
+	background: none;
+	background-image: url("../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	font-size: 17px;
+	color: white;
+	border: 1px solid #BFD1E7;
+}
+
+.bt-perfil {
+	margin-right: 31px;
+}
+
+.bt-perfil a,.bt-logout a,.link-registro a {
+	text-decoration: none;
+	color: white;
+}
+
+.usuario-logado {
+	margin-bottom: 25px;
+	max-width:180px;
+}
+
+.saludo {
+	font-size: 33px;
+}
+
+.bienvenido {
+	padding: 29px;
+	text-align: center;
+}
+
+
+.content-top .buscador .form-buscador select{
+	display: inline-block;
+	width: 46%;
+}
+
+
+.content-top .buscador .form-buscador select,.form-buscador input {
+	margin-top: 25px;
+}
+
+.content-top .buscador .form-buscador form {
+	padding: 15px;;
+}
+
+.content-top .form-buscador .campofecha {
+	background: none;
+	border:none;
+	margin:0px;	
+	width: 50%;
+}
+.content-top .form-buscador .botoncal{
+	float:right;
+}
+.content-top .form-buscador #ida,
+.content-top .form-buscador #vuelta{
+	display:inline-block;
+	border: 2px inset;	
+	margin-top: 25px;
+	width: 150px
+}
+.content-top .form-buscador #ida label,
+.content-top .form-buscador #vuelta label{
+  font-size: 12px; 
+} 
+
+.content-top .buscador .form-buscador .bt-buscar {
+	width: 168px !important;
+	font-size: 16px !important;
+	height: 45px !important;
+	background: url("../imagenes/bg-buscar-vuelo.png") repeat-x 0 100%
+		#80BE13;
+	margin-top: 69px;
+	margin-left: 76px;
+}
+
+#slider {
+	position: relative;
+	overflow: hidden;
+	width: 100%; height : 100%;
+	//border: 10px solid #333;
+	//border-radius: 40px;
+	margin: 0 auto;
+	padding: 0;
+	//height: 384px;
+}
+
+#slider>div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#slider img {
+	width: 100%;
+	min-height: 384px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#slider p {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	display: block;
+	width: 400px;
+	height: 24px;
+	margin: 0;
+	padding: 5px 0;
+	color: #eee;
+	background: #990000;
+	font-size: 22px;
+	line-height: 22px;
+	text-align: center;
+}
+.errores{
+	color:red;
+}
+
+.imagen-logo{
+	  width: 98%;
+} 

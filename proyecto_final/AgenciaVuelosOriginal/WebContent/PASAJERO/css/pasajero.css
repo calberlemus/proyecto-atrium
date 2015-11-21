@@ -1,0 +1,60 @@
+@CHARSET "ISO-8859-1";
+
+.content-pasajeros form {
+	padding: 25px;
+}
+
+.content-pasajeros form input {
+	width: 383px;
+}
+
+.content-pasajeros form select {
+	width: 387px;
+}
+
+.content-pasajeros .campo {
+	display: inline-block;
+	padding-left: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 34px;
+}
+
+.content-pasajeros .campo.primer-campo {
+	padding-top: 30px;
+}
+
+.content-pasajeros .campo.ultimo-campo {
+	padding-bottom: 30px;
+	display: block;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.content-pasajeros .label label {
+	text-align: left;
+}
+
+.content-pasajeros .pasajero {
+	border-radius: 10px 10px 10px 10px;
+	border: 1px solid #BFD1E7;
+	margin-bottom: 30px;
+}
+
+.content-pasajeros .pasajero .num-pasajero {
+	text-align: center;
+	background-color: #008dd6;
+	border-radius: 10px 10px 0px 0px;
+	color: white;
+}
+
+.bt-submit {
+	text-align: center;
+}
+
+.bt-submit .bt-continuar {
+	font-size: 16px !important;
+	height: 32px !important;
+	background: url("../imagenes/bg-buscar-vuelo.png") repeat-x 0 100%
+		#80BE13;
+}

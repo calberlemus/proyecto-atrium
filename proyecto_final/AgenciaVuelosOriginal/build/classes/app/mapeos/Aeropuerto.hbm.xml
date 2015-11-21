@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="app.modelo.Aeropuerto" table="AEROPUERTO">
+  <id name="Id" type="java.lang.Long">
+   <column name="ID_AEROPUERTO"/>
+   <generator class="native"/>
+  </id>
+
+  <property name="codigo" type="java.lang.String">
+   <column name="CODIGO"/>
+  </property>
+  <property name="ciudad" type="java.lang.String">
+   <column name="CIUDAD"/>
+  </property>
+  <property name="pais" type="java.lang.String">
+   <column name="PAIS"/>
+  </property>
+  <property name="nombre" type="java.lang.String">
+   <column name="NOMBRE"/>
+  </property>
+  
+  <set  name="vuelosOrigen" cascade="all" inverse="true" >
+   <key>
+    <column name="ORIGEN_ID"/>
+   </key>
+   <one-to-many class="app.modelo.Vuelo"/>
+  </set>
+  
+  <set name="vuelosDestino" cascade="all" inverse="true">
+      <key>
+         <column name="DESTINO_ID" />
+      </key>
+      <one-to-many class="app.modelo.Vuelo" />
+  </set>
+ </class>
+</hibernate-mapping>

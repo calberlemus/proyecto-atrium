@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="app.modelo.Vuelo" table="VUELO">
+        <id name="Id" type="java.lang.Long">
+            <column name="ID_VUELO" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="origen" >
+            <column name="ORIGEN_ID" />
+        </many-to-one>
+        <many-to-one name="destino">
+            <column name="DESTINO_ID" />
+        </many-to-one>
+        <property name="diaSalida" type="date">
+            <column name="DIASALIDA" />
+        </property>
+        <property name="diaLlegada" type="date">
+            <column name="DIALLEGADA" />
+        </property>
+        <property name="horaSalida" type="time">
+            <column name="HORASALIDA" />
+        </property>
+        <property name="horaLlegada" type="time">
+            <column name="HORALLEGADA" />
+        </property>
+        <property name="cancelado" type="boolean">
+            <column name="CANCELADO" />
+        </property>
+        <many-to-one name="compannia"> 
+        	<column name="ID_COMPANNIA"></column>
+        </many-to-one>
+        <property name="precioOferta" type="double">
+            <column name="PRECIOOFERTA" />
+        </property>
+        <property name="precioTurista" type="double">
+            <column name="PRECIOTURISTA" />
+        </property>
+        <property name="precioBussines" type="double">
+            <column name="PRECIOBUSSINES" />
+        </property>
+        <property name="numAsientosOferta" type="integer">
+            <column name="NUMASIENTOSOFERTA" />
+        </property>
+        <property name="numAsientosTurista" type="integer">
+            <column name="NUMASIENTOSTURISTA" />
+        </property>
+        <property name="numAsientosBussines" type="integer">
+            <column name="NUMASIENTOSBUSSINES" />
+        </property>
+        <set name="asientos" inverse="true" cascade="all">
+            <key>
+                <column name="ID_VUELO" />
+            </key>
+            <one-to-many class="app.modelo.Asiento" />
+        </set>   
+        
+        <set name="reservasIda" inverse="true" cascade="all">
+            <key>
+                <column name="ID_VUELO_IDA" />
+            </key>
+            <one-to-many class="app.modelo.Reserva" />
+        </set>
+        
+        <set name="reservasVuelta" inverse="true" cascade="all">
+            <key>
+                <column name="ID_VUELO_VUELTA" />
+            </key>
+            <one-to-many class="app.modelo.Reserva" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+		  "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		  "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="altaAeropuertoForm" type="app.actionforms.FormAltaAeropuerto"></form-bean>
+		<form-bean name="editarAeropuertoForm" type="app.actionforms.FormEditarAeropuerto"></form-bean>
+		<form-bean name="altaCompanniaForm" type="app.actionforms.FormAltaCompannia"></form-bean>
+		<form-bean name="editarCompanniaForm" type="app.actionforms.FormEditarCompannia"></form-bean>
+		<form-bean name="altaAdminCompanniaForm" type="app.actionforms.FormAltaAdminCompannia"></form-bean>
+		<form-bean name="editarAdminCompanniaForm" type="app.actionforms.FormEditarAdminCompannia"></form-bean>
+		<form-bean name="altaVueloForm" type="app.actionforms.FormAltaVuelo"></form-bean>
+		<form-bean name="editarVueloForm" type="app.actionforms.FormEditarVuelo"></form-bean>
+		<form-bean name="altaAsientoForm" type="app.actionforms.FormAltaAsiento"></form-bean>
+		<form-bean name="editarAsientoForm" type="app.actionforms.FormEditarAsiento"></form-bean>
+		<form-bean name="altaPasajeroForm" type="app.actionforms.FormAltaPasajero"></form-bean>
+		<form-bean name="editarPasajeroForm" type="app.actionforms.FormEditarPasajero"></form-bean>
+		<form-bean name="altaClienteForm" type="app.actionforms.FormAltaCliente"></form-bean>
+		<form-bean name="editarClienteForm" type="app.actionforms.FormEditarCliente"></form-bean>
+		<form-bean name="altaSuperForm" type="app.actionforms.FormAltaSuper"></form-bean>
+		<form-bean name="editarSuperForm" type="app.actionforms.FormEditarSuper"></form-bean>
+		<form-bean name="altaReservaForm" type="app.actionforms.FormAltaReserva"></form-bean>
+		<form-bean name="editarReservaForm" type="app.actionforms.FormEditarReserva"></form-bean>
+		<form-bean name="loginForm" type="app.actionforms.FormLogin"></form-bean>
+		<form-bean name="buscaVuelosForm" type="app.actionforms.FormBusquedaVuelos"></form-bean>
+		<form-bean name="buscaVuelosInteriorForm" type="app.actionforms.FormBusquedaVuelosInterior"></form-bean>
+		<form-bean name="altaOfertaForm" type="app.actionforms.FormAltaOferta"></form-bean>
+		<form-bean name="editarOfertaForm" type="app.actionforms.FormEditarOferta"></form-bean>					
+	</form-beans>
+
+	<action-mappings>	  
+		<action path="/alta-aeropuerto" type="app.actions.AltaAeropuertoAction" scope="request" validate="true" name="altaAeropuertoForm" 
+				input="/AltaAeropuerto.jsp">			
+			<forward name="ok" path="/admin-aeropuertos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-aeropuerto" type="app.actions.EditarAeropuertoAction" validate="true" name="editarAeropuertoForm" 
+				input="/EditarAeropuerto.jsp">			
+			<forward name="ok" path="/admin-aeropuertos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-aeropuerto" type="app.actions.DatosAeropuertoAction">
+			<forward name="ok" path="/EditarAeropuerto.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/eliminar-aeropuerto" type="app.actions.EliminarAeropuertoAction">
+			<forward name="ok" path="/admin-aeropuertos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-aeropuertos" type="app.actions.AdminAeropuertosAction">
+			<forward name="ok" path="/Aeropuertos.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		
+		<action path="/alta-compannia" type="app.actions.AltaCompanniaAction" scope="request" validate="true" name="altaCompanniaForm" 
+				input="/AltaCompannia.jsp">			
+			<forward name="ok" path="/admin-compannias.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-compannia" type="app.actions.EditarCompanniaAction" validate="true" name="editarCompanniaForm" 
+				input="/EditarCompannia.jsp">			
+			<forward name="ok" path="/admin-compannias.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-compannia" type="app.actions.DatosCompanniaAction">
+			<forward name="ok" path="/EditarCompannia.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>		
+		<action  path="/eliminar-compannia" type="app.actions.EliminarCompanniaAction">
+			<forward name="ok" path="/admin-compannias.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-compannias" type="app.actions.AdminCompanniasAction">
+			<forward name="ok" path="/Compannias.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		
+		<action path="/alta-admin-compannia" type="app.actions.AltaAdminCompanniaAction" validate="true" scope="request"  name="altaAdminCompanniaForm" 
+				input="/AltaAdmin.jsp">			
+			<forward name="ok" path="/admin-admincompannias.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-admin-compannia" type="app.actions.EditarAdminCompanniaAction" validate="true" name="editarAdminCompanniaForm" 
+				input="/EditarAdmin.jsp">			
+			<forward name="ok" path="/admin-admincompannias.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action path="/editar-admin-compannia-registro" type="app.actions.EditarAdminCompanniaAction" validate="true" name="editarAdminCompanniaForm" 
+				input="/EditarAdminRegistro.jsp">			
+			<forward name="ok" path="/home.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-admincompannia"  type="app.actions.DatosAdminCompanniaAction">
+			<forward name="editar" path="/EditarAdmin.jsp"/>
+			<forward name="alta" path="/AltaAdmin.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		<action  path="/datos-admin-compannia-registro" type="app.actions.DatosAdminCompanniaAction">
+			<forward name="editar" path="/EditarAdminRegistro.jsp"/>						
+			<forward name="error" path="/home.do"/>						
+		</action>		
+		<action  path="/eliminar-admincompannia" type="app.actions.EliminarAdminCompanniaAction">
+			<forward name="ok" path="/admin-admincompannias.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-admincompannias" type="app.actions.AdminAdminCompanniasAction">
+			<forward name="ok" path="/Admins.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		<action path="/alta-vuelo" type="app.actions.AltaVueloAction" scope="request" validate="true" name="altaVueloForm" 
+				input="/AltaVuelo.jsp">			
+			<forward name="ok" path="/admin-vuelos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-vuelo" type="app.actions.EditarVueloAction" validate="true" name="editarVueloForm" 
+				input="/EditarVuelo.jsp">			
+			<forward name="ok" path="/admin-vuelos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-vuelo" type="app.actions.DatosVueloAction">
+			<forward name="editar" path="/EditarVuelo.jsp"/>
+			<forward name="alta" path="/AltaVuelo.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>		
+		<action  path="/eliminar-vuelo" type="app.actions.EliminarVueloAction">
+			<forward name="ok" path="/admin-vuelos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-vuelos" type="app.actions.AdminVuelosAction">
+			<forward name="ok" path="/Vuelos.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		<action path="/alta-asiento" type="app.actions.AltaAsientoAction" scope="request" validate="true" name="altaAsientoForm" 
+				input="/ASIENTO/formularios/altaAsiento.jsp">			
+			<forward name="ok" path="/admin-vuelos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-asiento" type="app.actions.EditarAsientoAction" validate="true" name="editarAsientoForm" 
+				input="/ASIENTO/formularios/editarAsiento.jsp">			
+			<forward name="ok" path="/admin-vuelos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-asiento" type="app.actions.DatosAsientoAction">
+			<forward name="editar" path="/ASIENTO/formularios/editarAsiento.jsp"/>
+			<forward name="alta" path="/ASIENTO/formularios/altaAsiento.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>		
+		<action  path="/eliminar-asiento" type="app.actions.EliminarAsientoAction">
+			<forward name="ok" path="/admin-asientos.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-asientos" type="app.actions.AdminAsientosAction">
+			<forward name="ok" path="/Asientos.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		<action path="/alta-pasajero" type="app.actions.AltaPasajeroAction" scope="request" validate="true" name="altaPasajeroForm" 
+				input="/PASAJERO/formularios/altaPasajero.jsp">			
+			<forward name="ok" path="/admin-pasajeros.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-pasajero" type="app.actions.EditarPasajeroAction" validate="true" name="editarPasajeroForm" 
+				input="/PASAJERO/formularios/editarPasajero.jsp">			
+			<forward name="ok" path="/admin-pasajeros.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-pasajero" type="app.actions.DatosPasajeroAction">
+			<forward name="editar" path="/PASAJERO/formularios/editarPasajero.jsp"/>
+			<forward name="alta" path="/PASAJERO/formularios/altaPasajero.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>		
+		<action  path="/eliminar-pasajero" type="app.actions.EliminarPasajeroAction">
+			<forward name="ok" path="/admin-pasajeros.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-pasajeros" type="app.actions.AdminPasajerosAction">
+			<forward name="ok" path="/PASAJERO/paginas/adminPasajeros.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		
+		<action path="/alta-super" type="app.actions.AltaSuperAction" validate="true" name="altaSuperForm" 
+				input="/AltaSuper.jsp">			
+			<forward name="ok" path="/home.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action path="/editar-super" type="app.actions.EditarSuperAction" validate="true" name="editarSuperForm" 
+				input="/EditarSuper.jsp">			
+			<forward name="ok" path="/home.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action  path="/datos-super" type="app.actions.DatosSuperAction">
+			<forward name="editar" path="/EditarSuper.jsp"/>
+			<forward name="alta" path="/AltaSuper.jsp"/>
+			<forward name="error" path="/home.do"/>						
+		</action>	
+		
+		
+		
+		<action path="/alta-cliente" type="app.actions.AltaClienteAction" validate="true" name="altaClienteForm" 
+				input="/AltaCliente.jsp">			
+			<forward name="ok" path="/admin-clientes.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action path="/alta-cliente-registro" type="app.actions.AltaClienteAction" validate="true" name="altaClienteForm" 
+				input="/AltaClienteRegistro.jsp">			
+			<forward name="ok" path="/home.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>				
+		<action path="/editar-cliente" type="app.actions.EditarClienteAction" validate="true" name="editarClienteForm" 
+				input="/EditarCliente.jsp">			
+			<forward name="ok" path="/admin-clientes.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action path="/editar-cliente-registro" type="app.actions.EditarClienteAction" validate="true" name="editarClienteForm" 
+				input="/EditarClienteRegistro.jsp">			
+			<forward name="ok" path="/home.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-cliente-registro" type="app.actions.DatosClienteAction">
+			<forward name="editar" path="/EditarClienteRegistro.jsp"/>
+			<forward name="alta" path="/AltaClienteRegistro.jsp"/>
+			<forward name="Super" path="/home.do"/>
+			<forward name="editSuper" path="/EditarSuper.jsp"/>				
+			<forward name="error" path="/home.do"/>						
+		</action>
+		<action  path="/datos-cliente" type="app.actions.DatosClienteAction">
+			<forward name="editar" path="/EditarCliente.jsp"/>
+			<forward name="alta" path="/AltaCliente.jsp"/>
+			<forward name="error" path="/home.do"/>						
+		</action>		
+		<action  path="/eliminar-cliente" type="app.actions.EliminarClienteAction">
+			<forward name="ok" path="/admin-clientes.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-clientes" type="app.actions.AdminClientesAction">
+			<forward name="ok" path="/Clientes.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action path="/reservas-cliente" type="app.actions.ReservasClienteAction">			
+			<forward name="ok" path="/ReservasClienteLogado.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		
+		<action path="/alta-reserva" type="app.actions.AltaReservaAction" validate="true" name="altaReservaForm" 
+				input="/RESERVA/formularios/altaReserva.jsp">			
+			<forward name="ok" path="/admin-reservas.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-reserva" type="app.actions.EditarReservaAction" validate="true" name="editarReservaForm" 
+				input="/RESERVA/formularios/editarReserva.jsp">			
+			<forward name="ok" path="/admin-reservas.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-reserva" type="app.actions.DatosReservaAction">
+			<forward name="editar" path="/RESERVA/formularios/editarReserva.jsp"/>
+			<forward name="alta" path="/RESERVA/formularios/altaReserva.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>		
+		<action  path="/eliminar-reserva" type="app.actions.EliminarReservaAction">
+			<forward name="ok" path="/admin-reservas.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-reservas" type="app.actions.AdminReservasAction">
+			<forward name="ok" path="/RESERVA/paginas/adminReservas.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		
+		
+		<action path="/login" type="app.actions.LoginAction" validate="true" name="loginForm" 
+				input="/cabecera.jsp">			
+			<forward name="ok" path="/home.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/logout" type="app.actions.LogoutAction">			
+			<forward name="ok" path="/home.do"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		
+		<action path="/home" type="app.actions.HomeAction">			
+			<forward name="ok" path="/Home.jsp"/>
+			<forward name="Super" path="/datos-super.do"/>
+			<forward name="error" path="/home.do"/>			
+		</action>		
+		<action path="/busca-vuelos" type="app.actions.BuscarVuelosAction" validate="true" name="buscaVuelosForm" 
+				input="/Home.jsp">			
+			<forward name="idavuelta" path="/VuelosIdaVuelta.jsp"/>
+			<forward name="soloida" path="/VuelosSoloIda.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action path="/busca-vuelos-interior" type="app.actions.BuscarVuelosInteriorAction" validate="true" name="buscaVuelosInteriorForm" 
+				input="/VuelosIdaVuelta.jsp">			
+			<forward name="idavuelta" path="/VuelosIdaVuelta.jsp"/>
+			<forward name="soloida" path="/VuelosSoloIda.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		<action path="/busca-vuelos-ofertas" type="app.actions.BuscarVuelosOfertas" >			
+			<forward name="idavuelta" path="/VuelosIdaVuelta.jsp"/>			
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+		
+		<action path="/pasajeros-reserva" type="app.actions.PasajerosReservaAction">			
+			<forward name="ok" path="/Pasajeros.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		<action path="/alta-pasajeros-reserva" type="app.actions.AltaPasajerosReservaAction">			
+			<forward name="ok" path="/Reserva.jsp"/>
+			<forward name="ok2" path="/Pasajeros.jsp"></forward>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		<action path="/confirmar-reserva" type="app.actions.ConfirmarReservaAction">			
+			<forward name="ok" path="/ReservaConfirmada.jsp"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		<action path="/cancelar-vuelo" type="app.actions.CancelarVueloAction">			
+			<forward name="ok" path="/admin-vuelos.do"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		<action path="/informe-vuelos-disponibles" type="app.actions.InformeVuelosDisponiblesAction">			
+			<forward name="ok" path="/VUELO/Informes/fichero.pdf"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		<action path="/informe-billetes-compannia" type="app.actions.InformeBilletesCompanniaAction">			
+			<forward name="ok" path="/VUELO/Informes/fichero.pdf"/>
+			<forward name="error" path="/home.do"/>			
+		</action>
+		
+		<action path="/alta-oferta" type="app.actions.AltaOfertaAction" name="altaOfertaForm" 
+				input="/AltaOferta.jsp">			
+			<forward name="ok" path="/admin-ofertas.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action path="/editar-oferta" type="app.actions.EditarOfertaAction" name="editarOfertaForm"	input="/EditarOferta.jsp">			
+			<forward name="ok" path="/admin-ofertas.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/datos-oferta" type="app.actions.DatosOfertaAction">
+			<forward name="editar" path="/EditarOferta.jsp"/>
+			<forward name="alta" path="/AltaOferta.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>		
+		<action  path="/eliminar-oferta" type="app.actions.EliminarOfertaAction">
+			<forward name="ok" path="/admin-ofertas.do"/>
+			<forward name="error" path="/home.do"/>
+		</action>			
+		<action  path="/admin-ofertas" type="app.actions.AdminOfertasAction">
+			<forward name="ok" path="/Ofertas.jsp"/>
+			<forward name="error" path="/home.do"/>
+		</action>
+		
+			
+		
+		<action path="/subir-fichero" type="app.actions.AltaOfertaAction"  name="altaOfertaForm" 
+				input="/SubirFichero.jsp">			
+			<forward name="ok" path="/MostrarImagen.jsp"/>			
+		</action>	
+		
+	</action-mappings>
+	<message-resources parameter="app.util.ApplicationResources" />
+
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
+        <set-property
+                value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"
+                property="pathnames"/>
+    </plug-in>
+	
+</struts-config>
+	

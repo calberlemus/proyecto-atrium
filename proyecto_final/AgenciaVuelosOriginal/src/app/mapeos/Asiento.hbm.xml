@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="app.modelo.Asiento" table="ASIENTO">
+        <id name="Id" type="java.lang.Long">
+            <column name="ID_ASIENTO" />
+            <generator class="native" />
+        </id>        
+        <property name="numero" type="integer">
+            <column name="NUMERO" />
+        </property>
+        <property name="disponible" type="boolean">
+            <column name="DISPONIBLE" />
+        </property>
+        <property name="clase">
+            <column name="CLASE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">app.modelo.Clase</param>
+            </type>
+        </property>
+        <many-to-one name="vuelo">
+            <column name="ID_VUELO" />
+        </many-to-one>        
+    </class>
+</hibernate-mapping>

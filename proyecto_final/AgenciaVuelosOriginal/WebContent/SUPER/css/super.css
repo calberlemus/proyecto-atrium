@@ -1,0 +1,56 @@
+@CHARSET "ISO-8859-1";
+
+.form-editar-super form,.form-alta-super form {
+	padding: 30px;
+}
+
+.form-editar-super form input,.form-alta-super form input {
+	margin-bottom: 15px;
+}
+
+.form-editar-super form div,.form-alta-super form div {
+	margin-bottom: 5px;
+}
+
+.bt-guardar,.bt-alta {
+	margin-top: 25px;
+	background: none;
+	background-image: url("../../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	font-size: 17px;
+	color:white;
+	border: 1px solid #BFD1E7;
+}
+
+.tasks-super {
+	display: inline-flex;
+	margin-top: 10px;
+}
+
+.tasks-super .enlace-super {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: #75AE11;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-super .enlace-super-selected {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-super .enlace-super a {
+	color: white;
+	text-decoration: none;
+}
+
+.tasks-super .enlace-super-selected a {
+	color: #75AE11;
+	text-decoration: none;
+}

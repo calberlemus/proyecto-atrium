@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/agencia</property>
+    <property name="hibernate.connection.username">curso</property>
+    <property name="hibernate.connection.password">curso</property>
+    
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.connection.pool_size">1</property>    
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.cache.provider_class">
+        org.hibernate.cache.NoCacheProvider
+    </property>
+	
+	<mapping resource="app/mapeos/Reserva.hbm.xml"/>  
+	<mapping resource="app/mapeos/Vuelo.hbm.xml"/>
+    <mapping resource="app/mapeos/Aeropuerto.hbm.xml"/>   
+    <mapping resource="app/mapeos/Persona.hbm.xml"/>
+    <mapping resource="app/mapeos/Compannia.hbm.xml"/>    
+    <mapping resource="app/mapeos/Asiento.hbm.xml"/>
+    <mapping resource="app/mapeos/AdminCompannia.hbm.xml"/>
+    <mapping resource="app/mapeos/Cliente.hbm.xml"/>
+    <mapping resource="app/mapeos/Usuario.hbm.xml"/>
+    <mapping resource="app/mapeos/Pasajero.hbm.xml"/>
+    <mapping resource="app/mapeos/Oferta.hbm.xml"/>           
+    
+  </session-factory>
+</hibernate-configuration>

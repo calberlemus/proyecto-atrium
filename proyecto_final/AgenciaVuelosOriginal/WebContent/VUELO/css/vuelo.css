@@ -1,0 +1,203 @@
+@CHARSET "ISO-8859-1";
+
+.content {
+	padding: 15px !important;
+}
+.dato.cancelado{
+	color:red;
+}
+.dia, .hora{
+	display:inline-block;
+}
+.fieldset{
+	  padding-top: 25px;
+}
+
+.fieldset .precio input{
+	border:none;
+	margin-bottom: 0px;
+	text-align: right;
+	margin-right: 3px;
+}
+.fieldset .precio{
+	border:1px solid black;
+	display:inline-block;
+	margin-right: 15px;
+}
+.fieldset .titulo{
+	font-size: 23px;
+	padding-bottom: 28px;
+	font-weight: bold;
+}
+.form-editar-vuelo form,.form-alta-vuelo form {
+	padding: 30px;
+}
+
+.form-editar-vuelo form select,.form-alta-vuelo form select,
+.form-editar-vuelo form input,.form-alta-vuelo form input {
+	margin-bottom: 15px;
+}
+
+.form-editar-vuelo form div,.form-alta-vuelo form div {
+	margin-bottom: 5px;
+}
+
+.bt-guardar,.bt-alta {
+	margin-top: 25px;
+	background: none;
+	background-image: url("../../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	font-size: 17px;
+	color:white;
+	border: 1px solid #BFD1E7;
+}
+
+.tasks-vuelo {
+	display: inline-flex;
+	margin-top: 10px;
+}
+
+
+.tasks-vuelo .enlace-vuelos {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: #75AE11;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-vuelo .enlace-vuelos-selected {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-vuelo .enlace-vuelos a {
+	color: white;
+	text-decoration: none;
+}
+
+.tasks-vuelo .enlace-vuelos-selected a {
+	color: #75AE11;
+	text-decoration: none;
+}
+
+.content .contenido table th,
+.content .contenido table td{
+	padding: 2px!important;
+	
+}
+.dato ul{
+	list-style: none;
+	padding: 0px;
+    min-width: 110px;
+}
+.content-top{
+	height: auto!important;
+	margin-bottom: 63px!important;
+}
+.content-top .buscador-vuelos {
+	width: 100%;	
+	border: 1px solid #75AE11;
+	border-radius: 10px 10px;
+}
+.content-top .buscador-vuelos .titulo-buscador {
+	height: 26px;
+	background-image: url("../../imagenes/bg-image-titulo-buscador.gif");
+    border-radius: 10px 10px 0px 0px;
+	text-align: center;
+}
+
+.content-top .buscador-vuelos form{
+	padding: 25px;	
+}
+.content-top .buscador-vuelos form select{
+	width: 376px
+}
+.content-top .buscador-vuelos .label{
+	display: inline-block;
+	width: 70px;
+	margin-top: 25px;
+}
+.content-top .buscador-vuelos .label label{
+	text-align: left;
+	font-size: 14px!important;
+		
+}
+.botoncal{
+	float:none!important;
+}
+.content-top .buscador-vuelos #ida-interior,
+.content-top .buscador-vuelos #vuelta{
+	display: inline-block;
+	border:none;
+	margin:0px;
+	width: auto;
+}
+.content-top .buscador-vuelos .campofecha{
+	border:2px inset;
+	margin-top:15px;
+	width: auto!important;
+}
+.content-top .buscador-vuelos #ida-interior{
+	margin-right: 65px;	
+}
+.content-top .buscador-vuelos #vuelta{
+	margin-left: 68px;
+}
+.content-top .buscador-vuelos .radio-ida-vuelta{
+	display:inline-block;
+	font-size: 12px;
+	margin-top:10px;
+}
+.content-top .buscador-vuelos .lb-solo-ida{
+  margin-right: 19px;
+}
+.content-top .buscador-vuelos .lb-clase,
+.content-top .buscador-vuelos .lb-destino{
+	  margin-left: 38px;
+}
+
+
+.content-top .buscador-vuelos .form-buscador .bt-buscar {
+	width: 119px !important;
+	font-size: 16px !important;
+	height: 32px !important;
+	background: url("../imagenes/bg-buscar-vuelo.png") repeat-x 0 100%
+		#80BE13;
+
+}
+
+.content-bottom .compannia-vuelo{
+	  background-color: #008dd6;
+	  color:white;
+}
+.content-bottom .compannia-vuelo div{
+	margin-left: 10px;
+}
+.content-bottom .compannia-vuelo td{
+	border-radius: 10px 10px 0px 0px;	
+}
+.content-bottom td{
+	border: 1px solid #BFD1E7;
+}
+.content-bottom .celda-continuar{
+	text-align: center;
+}
+.content-bottom .espacio-vuelos{
+	height: 30px;
+}
+.content-bottom .vuelos-ida-vuelta{
+	width: 100%;
+}
+.content-top .buscador-vuelos input{
+	margin-top:0px;
+}
+.bt{
+	margin-top:25px;
+	text-align: center;
+}

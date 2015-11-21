@@ -1,0 +1,60 @@
+@CHARSET "ISO-8859-1";
+
+.form-editar-compannia form,.form-alta-compannia form {
+	padding: 30px;
+}
+
+.form-editar-compannia form input,.form-alta-compannia form input {
+	margin-bottom: 15px;
+}
+
+.form-editar-compannia form div,.form-alta-compannia form div {
+	margin-bottom: 5px;
+}
+
+.bt-guardar,.bt-alta {
+	margin-top: 25px;
+	background: none;
+	background-image: url("../../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	font-size: 17px;
+	color:white;
+	border: 1px solid #BFD1E7;
+}
+
+.tasks-compannia {
+	display: inline-flex;
+	margin-top: 10px;
+}
+
+.tasks-compannia .enlace-compannias {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: #75AE11;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-compannia .enlace-compannias-selected {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-compannia .enlace-compannias a {
+	color: white;
+	text-decoration: none;
+}
+
+.tasks-compannia .enlace-compannias-selected a {
+	color: #75AE11;
+	text-decoration: none;
+}
+.form-editar-compannia form .codigo,
+.form-alta-compannia form .codigo{
+	  margin-bottom: 0px !important;
+}

@@ -1,0 +1,89 @@
+@CHARSET "ISO-8859-1";
+
+.content-reserva .datos-reserva{
+	border: 1px solid #cccccc;
+}
+.content-reserva .datos-reserva .titulo{
+	background-color: #f7f7e7;
+    border-bottom: 1px solid #cccccc;
+}
+.content-reserva .datos-reserva .datos-pasajeros,
+.content-reserva .datos-reserva .datos-vuelos{
+	padding: 20px;
+}
+
+.content-reserva .datos-reserva .datos-pasajeros{
+	border-top: 1px solid #cccccc;
+}
+
+.content-reserva .compannia-vuelo{
+	  background-color: #C5D7E0;
+	  color:white;
+}
+.content-reserva .compannia-vuelo div{
+	margin-left: 10px;
+}
+.content-reserva .compannia-vuelo td{
+	/*border-radius: 10px 10px 0px 0px;*/	
+}
+.content-reserva td{
+	border: 1px solid #BFD1E7;
+}
+.content-reserva .celda-continuar{
+	text-align: center;
+}
+.content-reserva .espacio-vuelos{
+	height: 30px;
+}
+.content-reserva .vuelos-ida-vuelta{
+	width: 100%;
+}
+
+.content-reserva .vuelos-ida-vuelta .fecha{
+	width: 10%;
+}
+.content-reserva .vuelos-ida-vuelta .precio{
+	width: 8%;
+}
+.content-reserva .vuelos-ida-vuelta .aeropuerto{
+	width: 36%;
+}
+.lista.pasajeros th{
+	  background-color: #C5D7E0;
+  color: white;
+}
+.lista.pasajeros{
+	  width: 100%;
+}
+.espacio-lateral{
+	display:inline-block;
+	width: 65%
+	
+}
+.precio-total{
+	display:inline-block;
+	margin-left: 77px;
+}
+.precio-total .precio-final td{
+	border:none;
+}
+.precio-total .precio-final .numpas{
+	width: 200px;
+}
+.bt-continuar{
+  width: 168px !important;
+  font-size: 16px !important;
+  height: 45px !important;
+  background: url("../../imagenes/bg-buscar-vuelo.png") repeat-x 0 100%
+ 	#80BE13;
+ margin-top: 40px;
+  margin-left: 33px;
+
+  margin-bottom: 30px;	 
+}
+.bt-continuar a{
+	text-decoration: none;
+}
+.confirmado{
+	color:#80BE13;
+}
