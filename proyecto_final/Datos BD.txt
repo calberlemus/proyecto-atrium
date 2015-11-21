@@ -1,0 +1,6 @@
+﻿Nombre del esquema de BD: "agencia"
+Usuario: "curso"
+Contraseña: "curso"
+
+La bd esta precargada de algunos Aeropuertos y Compñías para que sea
+mas facil probar el portal. Por lo demas debe estar totalmente vacía.

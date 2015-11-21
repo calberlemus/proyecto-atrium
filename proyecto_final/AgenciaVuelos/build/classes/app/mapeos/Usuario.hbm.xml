@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="app.modelo.Usuario" extends="app.modelo.Persona" table="USUARIO" lazy="false">
+        <key>
+            <column name="ID_USUARIO" />
+        </key>
+        <property name="telefono" type="java.lang.String">
+            <column name="TELEFONO" />
+        </property>
+        <property name="nick" type="java.lang.String">
+            <column name="NICK" />
+        </property>
+        <property name="pass" type="java.lang.String">
+            <column name="PASS" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="rol">
+            <column name="ROL" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">app.modelo.Rol</param>
+            </type>
+        </property>
+        
+    </joined-subclass>
+</hibernate-mapping>

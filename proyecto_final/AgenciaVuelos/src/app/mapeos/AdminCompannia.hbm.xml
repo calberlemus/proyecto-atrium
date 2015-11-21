@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="app.modelo.AdminCompannia" extends="app.modelo.Usuario" table="ADMINCOMPANNIA" lazy="false">
+        <key>
+            <column name="ID_ADMIN_COMP" />
+        </key>
+        <property name="numRegistro" type="long">
+            <column name="NUMREGISTRO" />
+        </property>
+        
+        <many-to-one name="compannia"> 
+        	<column name="ID_COMPANNIA"></column>
+        </many-to-one>
+        
+    </joined-subclass>
+</hibernate-mapping>

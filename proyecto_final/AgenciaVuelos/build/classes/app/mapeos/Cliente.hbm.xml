@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-mar-2015 20:06:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="app.modelo.Cliente" extends="app.modelo.Usuario" table="CLIENTE" lazy="false">
+        <key>
+            <column name="ID_CLIENTE" />
+        </key>
+        <property name="numCliente" type="java.lang.Long">
+            <column name="NUMCLIENTE" />
+        </property>
+        <set name="reservas" table="RESERVA" inverse="true" cascade="all">
+            <key>
+                <column name="ID_CLIENTE" />
+            </key>
+            <one-to-many class="app.modelo.Reserva" />
+        </set>
+    </joined-subclass>
+</hibernate-mapping>

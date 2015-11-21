@@ -1,0 +1,58 @@
+@CHARSET "ISO-8859-1";
+
+.form-editar-cliente form,.form-alta-cliente form {
+	padding: 30px;
+}
+.num-cliente{
+	margin-bottom: 3px !important;
+}
+.form-editar-cliente form input,.form-alta-cliente form input {
+	margin-bottom: 15px;
+}
+
+.form-editar-cliente form div,.form-alta-cliente form div {
+	margin-bottom: 5px;
+}
+
+.bt-guardar,.bt-alta {
+	margin-top: 25px;
+	background: none;
+	background-image: url("../../imagenes/bg-image-menu-principal.gif");
+	background-repeat: repeat-x;
+	font-size: 17px;
+	color:white;
+	border: 1px solid #BFD1E7;
+}
+
+.tasks-cliente {
+	display: inline-flex;
+	margin-top: 10px;
+}
+
+.tasks-cliente .enlace-clientes {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: #75AE11;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-cliente .enlace-clientes-selected {
+	border: 1px solid #75AE11;
+	border-bottom: 0px;
+	padding: 6px;
+	margin-right: 20px;
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.tasks-cliente .enlace-clientes a {
+	color: white;
+	text-decoration: none;
+}
+
+.tasks-cliente .enlace-clientes-selected a {
+	color: #75AE11;
+	text-decoration: none;
+}
